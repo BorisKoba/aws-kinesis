@@ -14,9 +14,11 @@ public class ConsumerKinesisAppl {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConsumerKinesisAppl.class, args);
+
 	}
 	@Bean
-	Consumer<String> consumerMessages(){
-		return message ->log.info(message);
+	Consumer<String> consumerMessages() {
+		return message -> log.info(message);
 	}
+
 }

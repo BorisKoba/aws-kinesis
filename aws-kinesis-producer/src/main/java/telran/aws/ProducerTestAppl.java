@@ -16,10 +16,12 @@ public class ProducerTestAppl {
 		ConfigurableApplicationContext ctx = SpringApplication.run(ProducerTestAppl.class, args);
 		Thread.sleep(TIMEOUT);
 		ctx.close();
+
 	}
 	@Bean
-	Supplier<String> supplierMessages(){
-		return()->"message" + count++;
-		
+	Supplier<String> supplierMessages() {
+		return () -> "message" + count++;
 	}
+	
+
 }
